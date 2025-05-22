@@ -1,0 +1,24 @@
+import random
+import math
+
+def printList(lst):
+    for i in range(len(lst)):
+        for j in range(len(lst[i])):
+            print(lst[i][j], end='    ')
+        print()
+
+m = 4
+n = 4
+A = []
+
+for i in range(n):
+    A.append([])
+    for j in range(m):
+        A[i].append(random.randint(10, 20))
+
+printList(A)
+print()
+
+for i in range(n):
+    cem = sum(math.sqrt(A[i][j]) for j in range(m))
+    print()
